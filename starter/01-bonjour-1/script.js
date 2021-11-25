@@ -31,6 +31,7 @@ ELEMENT.addEventListener(EVENEMENT, FONCTION);
 EXERCICE 1 :
 Affiche bonjour dans une boîte de dialogue au clic sur le bouton
 */
+
 /*
 TRADUCTION :
 Quand l'événement "click" se produit sur l'élément "bouton" de l'interface, exécute la fonction "direBonjour"
@@ -42,7 +43,10 @@ MÉTHODE :
 3. ajouter à ce bouton un gestionnaire d'événement avec la méthode  addEventListener() qui va écouter le clic (événement click) et qui, au clic sur le bouton,  déclenchera l'appel de la fonction direbonjour.
 */
 
-
+const eButton = document.querySelector('#hello');
+eButton.addEventListener('click',(event)=>{
+    alert('Bonjour toi !');
+})
 
 
 // Autre écriture : avec une fonction anonyme

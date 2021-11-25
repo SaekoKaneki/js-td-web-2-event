@@ -11,6 +11,16 @@
    * 3°) avec une arrow fonction et une expression conditionnelle
 */
 
+const direBonjour = document.querySelector('#hello');
+direBonjour.addEventListener('click',(event)=>{
+    const sName = document.querySelector('#prenom');
+    if(sName.textContent === ''){
+        alert(`Bonjour toi ! Tu ne veux pas me dire comment tu t'appelles ?`);
+    }else{
+        alert(sName.value);
+    }
+
+})
 
 // Autre écriture
 

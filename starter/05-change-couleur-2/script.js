@@ -9,6 +9,22 @@ EXERCICE 5 : Change couleur (2) - Colorie la page en fonction des touches press�
     et affiche le message 'Touche … non gérée' s'il presse une autre touche.
 - Méthode : utilise un switch pour gérer les différents cas de touches
 */
+document.addEventListener('keypress', (event)=>{
+    let eTouch =String.fromCharCode(event.charCode);
+    eTouch = eTouch.toUpperCase();
+    if (eTouch === 'B' || eTouch === 'b') {
+        document.querySelector('body').style.backgroundColor = 'blue';
+    }else if (eTouch === 'R' || eTouch === 'r'){
+        document.querySelector('body').style.backgroundColor = 'red';
+    }else if (eTouch === 'Y' || eTouch === 'y'){
+        document.querySelector('body').style.backgroundColor = 'yellow';
+    }else if (eTouch === 'G' || eTouch === 'g'){
+        document.querySelector('body').style.backgroundColor = 'green';
+    }else{
+        alert(`Touche ${eTouch} non gérée`);
+    }
+    console.log(eTouch);
+});
 
 
 
