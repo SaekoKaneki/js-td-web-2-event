@@ -9,8 +9,19 @@ Ta mission est toujours la même : au clic sur un des boutons, colorie la page d
 */
 
 const aColors = document.querySelectorAll('button');
+const eBody = document.querySelector('body');
 for (const eColor of aColors) {
     eColor.addEventListener('click', (event)=>{
-      document.documentElement.style.backgroundColor = eColor.dataset;
-    })
+        if (eColor.id === 'red'){
+            eBody.setAttribute('class', 'red');
+        }else if (eColor.id === 'green'){
+            eBody.setAttribute('class', 'green');
+        }else if (eColor.id === 'yellow'){
+            eBody.setAttribute('class', 'yellow');
+        }else if (eColor.id === 'blue'){
+            eBody.setAttribute('class', 'blue');
+        }
+    });
 }
+
+

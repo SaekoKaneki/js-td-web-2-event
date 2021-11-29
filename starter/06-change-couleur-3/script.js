@@ -9,3 +9,10 @@ EXERCICE 6 : Change couleur (3)
 */
 
 // ÉTAPE 1 : on ne gère que le clic
+const eColor = document.querySelector('#colorChoice');
+const eBody = document.querySelector('body');
+const eButton = document.querySelector('#colorBtn');
+
+eButton.addEventListener('click',(event)=>{
+    eBody.style.backgroundColor = eColor.value;
+});

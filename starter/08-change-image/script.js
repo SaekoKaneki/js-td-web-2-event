@@ -31,3 +31,10 @@ La méthode classique est de créer une variable temporaire, comme ceci :
 
 
 // BONUS : switch entre les deux images
+const eSrc=document.querySelector('img').getAttribute('src');
+const eData = document.querySelector('img').dataset.hover;
+console.log(eData);
+document.querySelector('img').addEventListener('click', (event)=>{
+    event.currentTarget.classList.toggle('eData');
+
+})

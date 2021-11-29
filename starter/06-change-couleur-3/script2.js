@@ -14,3 +14,17 @@ EXERCICE 6 : Change couleur (3)
 
 // ÉTAPE 2 : version avec deux écouteurs
 
+const eColor = document.querySelector('#colorChoice');
+const eBody = document.querySelector('body');
+const eButton = document.querySelector('#colorBtn');
+
+eButton.addEventListener('click',(event)=>{
+    eBody.style.backgroundColor = eColor.value;
+
+});
+document.addEventListener('keypress',(event)=>{
+    event.key='enter';
+    eBody.style.backgroundColor = eColor.value;
+    event.preventDefault();
+
+});
