@@ -17,7 +17,7 @@ document.querySelector('#blue').addEventListener('click', (event)=>{
 })
 document.querySelector('#yellow').addEventListener('click', (event)=>{
     document.documentElement.style.backgroundColor = 'yellow';
-})
+});
 
 
 

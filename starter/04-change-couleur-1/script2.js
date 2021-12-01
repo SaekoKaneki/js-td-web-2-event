@@ -15,8 +15,6 @@ for (const eColor of aColors) {
         document.documentElement.style.backgroundColor= eColor.id;
     })
 }
-
-
 // BONUS : encore mieux avec la boucle
 
 

@@ -12,15 +12,14 @@
 */
 
 const direBonjour = document.querySelector('#hello');
+const sName = document.querySelector('#prenom');
 direBonjour.addEventListener('click',(event)=>{
-    const sName = document.querySelector('#prenom');
-    if(sName.textContent === ''){
+    if(sName.value === ''){
         alert(`Bonjour toi ! Tu ne veux pas me dire comment tu t'appelles ?`);
     }else{
-        alert(sName.value);
+        alert(`Bonjour, ${sName.value} !`);
     }
-
-})
+});
 
 // Autre écriture
 

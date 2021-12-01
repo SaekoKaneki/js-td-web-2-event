@@ -6,13 +6,26 @@ Version 1  : une fonction par bouton radio
 		(1) un alert dans une fonction pour voir à quoi correspond e.target
 		(2) un alert dans chaque fonction pour voir à quoi correspond e.target.value
 */
-const aInputs = document.querySelectorAll('input');
-const eBody = document.querySelector('body');
-const eButton = document.querySelector('#colorBtn');
+(function (){
+    const oChangecolor ={
+        init(){
+            const aInputs = document.querySelectorAll('input');
+            const eBody = document.querySelector('body');
+            const eSubmit = document.querySelector('#boutonCouleur')
 
-for (const eInput of aInputs) {
-    eInput.addEventListener('click', (event) => {
-        eBody.style.backgroundColor = eInput.value;
-    });
-}
+            for (const eInput of aInputs) {
+                eInput.addEventListener('click', (event) => {
+                    eBody.style.backgroundColor = eInput.value;
+                });
+            }
+            eSubmit.addEventListener('click', (event)=>{
+                eBody.style.backgroundColor='#'+(Math.random()*0xFFFFFF<<0).toString(16);
+            });
+        }
+    }
+    oChangecolor.init();
+})();
+
+
+
 

@@ -26,5 +26,4 @@ document.addEventListener('keypress',(event)=>{
     event.key='enter';
     eBody.style.backgroundColor = eColor.value;
     event.preventDefault();
-
 });

@@ -12,13 +12,13 @@ EXERCICE 5 : Change couleur (2) - Colorie la page en fonction des touches press�
 document.addEventListener('keypress', (event)=>{
     let eTouch =String.fromCharCode(event.charCode);
     eTouch = eTouch.toUpperCase();
-    if (eTouch === 'B' || eTouch === 'b') {
+    if (eTouch === 'B') {
         document.querySelector('body').style.backgroundColor = 'blue';
-    }else if (eTouch === 'R' || eTouch === 'r'){
+    }else if (eTouch === 'R' ){
         document.querySelector('body').style.backgroundColor = 'red';
-    }else if (eTouch === 'Y' || eTouch === 'y'){
+    }else if (eTouch === 'Y'){
         document.querySelector('body').style.backgroundColor = 'yellow';
-    }else if (eTouch === 'G' || eTouch === 'g'){
+    }else if (eTouch === 'G'){
         document.querySelector('body').style.backgroundColor = 'green';
     }else{
         alert(`Touche ${eTouch} non gérée`);

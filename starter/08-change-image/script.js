@@ -31,10 +31,13 @@ La méthode classique est de créer une variable temporaire, comme ceci :
 
 
 // BONUS : switch entre les deux images
-const eSrc=document.querySelector('img').getAttribute('src');
+const eImg=document.querySelector('img');
 const eData = document.querySelector('img').dataset.hover;
 console.log(eData);
 document.querySelector('img').addEventListener('click', (event)=>{
-    event.currentTarget.classList.toggle('eData');
+    eImg.src= eData.value;
+    if (eImg.src.includes('wink')){
+        eImg.src= eImg.src.value;
+    }
 
 })
